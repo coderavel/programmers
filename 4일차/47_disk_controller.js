@@ -3,7 +3,11 @@ function solution(jobs) {
     var cnt = jobs.length;
 
     jobs.sort((a, b) => {
-        return a[0] - b[0];
+        if(a[0] == b[0]) {
+            return a[1] - b[1];
+        } else {
+            return a[0] - b[0];
+        }        
     });
 
     var next = [];
