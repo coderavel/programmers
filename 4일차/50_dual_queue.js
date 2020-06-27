@@ -7,19 +7,19 @@ function solution(operations) {
         var op = operations[i].split(' ');
         if(op[0] == 'I') {
             queue.push(parseInt(op[1]));
-            queue.sort((a, b) => b - a);
+            queue.sort((a, b) => a - b);
         } else if(queue.length > 0) {
             if(op[1] == '1') {
-                queue.shift();
-            } else {
                 queue.pop();
+            } else {
+                queue.shift();
             }
         }
     }
-    return queue.length ? queue : [0, 0]
+    return queue.length ? queue : [0, 0];
 }
 
 console.log(solution(['I 16', 'D 1']));
-console.log(solution(['I 7','I 5','I -5','D -1']));
+console.log(solution(['I 7', 'I 5', 'I -5', 'D -1']));
 console.log(solution(['I 1', 'I 5', 'I 3', 'D 1']));
 // console.log(solution(['D 1','I 7','I 5','I -5','D -1']));
