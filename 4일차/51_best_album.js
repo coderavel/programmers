@@ -26,6 +26,9 @@ function solution(genres, plays) {
         i++;
     }
 
+    console.log(hash);
+    console.log(list);
+
     list.sort((a, b) => {
         return b.total - a.total;
     });

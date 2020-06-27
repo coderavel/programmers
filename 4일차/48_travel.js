@@ -24,7 +24,7 @@ function solution(tickets) {
             }
             i++;
         }
-        if(gate.path.length == tickets.length + 1) {
+        if(gate.ticket.length == 0) {
             if(!answer){
                 answer = gate.path;   
             } else {        
@@ -33,6 +33,10 @@ function solution(tickets) {
                 }
             }
         }
+        // if(gate.path.length == tickets.length + 1) {
+        //     console.log(gate.path.toString());
+            
+        // }
     }
 
     return answer;
@@ -41,3 +45,9 @@ function solution(tickets) {
 // console.log(solution([['ICN', 'AAA'], ['AAA', 'BBB'], ['BBB', 'AAA'], ['AAA', 'ICN'], ['ICN', 'AAA']]));
 // console.log(solution([['ICN', 'JFK'], ['HND', 'IAD'], ['JFK', 'HND']]));
 console.log(solution([['ICN', 'SFO'], ['ICN', 'ATL'], ['SFO', 'ATL'], ['ATL', 'ICN'], ['ATL', 'SFO']]));
+
+var arr2 = [[1, 2], [3, 4]];
+
+var arr3 = arr2.slice();
+
+var str = ['-1', '1'];

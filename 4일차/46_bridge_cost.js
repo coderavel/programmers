@@ -32,16 +32,14 @@ function solution(n, costs) {
             }
         }
 
-        if(target != -1) {
-            visit[target] = true;
-            cost += costs[i][2];
-            costs.splice(i, 1);
-            conn++;
-        }
+        visit[target] = true;
+        cost += costs[i][2];
+        costs.splice(i, 1);
+        conn++;
     }
 
     return cost;
 }
 
-console.log(solution(4, [[0,1,1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]));
+console.log(solution(4, [{from: 0,to: 1,cost: 1},[0,2,2],[1,2,5],[1,3,1],[2,3,8]]));
 console.log(solution(6, [[0, 1, 5], [0, 3, 2], [0, 4, 3], [1, 4, 1], [3, 4, 10], [1, 2, 2], [2, 5, 3], [4, 5, 4]]));

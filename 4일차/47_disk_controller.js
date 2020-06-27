@@ -7,7 +7,7 @@ function solution(jobs) {
             return a[1] - b[1];
         } else {
             return a[0] - b[0];
-        }        
+        }
     });
 
     var next = [];
@@ -23,7 +23,7 @@ function solution(jobs) {
 
             var work = next.pop();
 
-            total = total + endTime - work[0] + work[1];
+            total = total + (endTime - work[0]) + work[1];
 
             endTime += work[1];
         }
@@ -43,9 +43,6 @@ function solution(jobs) {
                     jobs.splice(0, 1);
                 }  else if(jobs[0][0] < endTime) {
                     next.push(jobs.splice(0, 1)[0]);
-                }
-                else {
-                    break;
                 }
             }
         }
