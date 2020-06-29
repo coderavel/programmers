@@ -1,12 +1,3 @@
-function Print(arr)
-{
-    for(var i = 1; i <= 5; i++)
-    {
-        var l = arr[i].slice(1);
-        console.log(l.toString());
-    }
-}
-
 function solution(n, results) {
     var answer = 0;
 
@@ -25,7 +16,7 @@ function solution(n, results) {
         matrix[results[i][0]][results[i][1]] = 1;
         matrix[results[i][1]][results[i][0]] = -1;
     }
-    
+
     for(var m = 1; m <= n; m++)
     {
         for(var s = 1; s <= n; s++)
@@ -42,7 +33,6 @@ function solution(n, results) {
             }
         }
     }
-
     
     for(var i = 1; i <= n; i++)
     {
