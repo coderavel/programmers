@@ -16,6 +16,8 @@ function solution(n, results) {
         matrix[results[i][0]][results[i][1]] = 1;
         matrix[results[i][1]][results[i][0]] = -1;
     }
+    
+    console.log(matrix);
 
     for(var m = 1; m <= n; m++)
     {
@@ -33,6 +35,8 @@ function solution(n, results) {
             }
         }
     }
+
+    console.log(matrix);
     
     for(var i = 1; i <= n; i++)
     {

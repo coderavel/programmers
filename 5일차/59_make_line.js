@@ -11,19 +11,23 @@ function solution(n, k) {
     k--;
 
     while(no.length > 0) {
+        console.log(fact, n);
         var cnt = fact / n;
+        console.log(cnt);
         fact /= n;
         n--;
 
         var p = Math.floor(k / cnt);
+        console.log(p);
 
         answer.push(no[p]);
         no.splice(p, 1);
 
         k = k % cnt;
+        console.log(k);
+        console.log('==============');
     }
-
     return answer;
 }
 
-console.log(solution(6, 20));
+console.log(solution(3, 4));

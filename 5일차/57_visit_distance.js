@@ -52,8 +52,10 @@ function solution(dirs) {
         i++;
     }
 
+    console.log(map);
+
     return answer;
 }
 
 console.log(solution('ULURRDLLU'));
-// console.log(solution('LULLLLLLU'));
+console.log(solution('LULLLLLLU'));

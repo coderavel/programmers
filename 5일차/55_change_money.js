@@ -8,8 +8,10 @@ function solution(n, money) {
         for (var j = 1; j <= n; j++) { // 각 금액에 대한 경우
             if (money[i] <= j) {
                 dp[j] += dp[j - money[i]];
+                //dp[j] = dp[j] + dp[j - money[i]];
             }
         }
+        console.log(dp);
     }
 
     return dp[n];

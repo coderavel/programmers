@@ -61,9 +61,3 @@ function solution(n, times) {
 }
 
 console.log(solution(6, [7, 10]));
-// console.log(solution(6, [6, 10]));
-// console.log(solution(6, [8, 10]));
-// console.log(solution(6, [4, 10]));
-// console.log(solution(11, [3, 4, 10]));
-// console.log(solution(5, [1,1,10]));
-// console.log(solution(1000, [1,1,1000]));

@@ -48,6 +48,10 @@ console.log(solution([['ICN', 'SFO'], ['ICN', 'ATL'], ['SFO', 'ATL'], ['ATL', 'I
 
 var arr2 = [[1, 2], [3, 4]];
 
-var arr3 = arr2.slice();
+var arr3 = arr2.map(v => {
+    return v.slice();
+});
 
-var str = ['-1', '1'];
+arr2[0][1] = 4;
+
+console.log(arr3);
